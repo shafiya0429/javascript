@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    
+</head>
+<body>
+    <p id="p1"></p>
+
+    <button id="btn1">show topic</button>
+
+    <button id="btn2">cancel topic2</button>
+
+    <script>
+        function msg1(){
+            document.getElementById("p1").innerText="Hypertext markup language"
+        }
+
+        function msg2(){
+            document.getElementById("p1").innerText="cascading style sheet"
+        }
+
+        function msg3(){
+            document.getElementById("p1").innertext="add the functionality to the webpage"
+        }
+        var clearTask;
+        function all()
+        {
+            setTimeout(msg1,3000);
+            clearTask=setTimeout(msg2,6000);
+            setTimeout(msg3,7000);
+        }
+
+        document.getElementById("btn1").addEventListener("click",all);
+
+        document.getElementById("btn2").addEventListener("click",()=>{
+            clearTimeout(clearTask);
+        })
+      
+    </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body{
+            
+            margin: 50px auto;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 2px 2px 2px 2px black;
+            width: 300px;
+            height: 300px;
+            background: lightgray;
+        }
+
+        .container input{
+            width: 250px;
+            padding: 10px;
+            margin-bottom: 10px;
+            margin-top: 20px;
+            color: blueviolet;
+            
+        }
+        button{
+            color: brown;
+            background:lightgrey;
+            box-sizing: border-box;
+            box-shadow: 0px 0px 0px 1px;
+            width: 40px;
+            margin-top: 10px;
+        }   
+
+        
+    </style>
+</head>
+<body class="container">
+    <div >
+        <input type="text" placeholder="number1" id="t1">
+    </div>
+    <div>
+        <input type="text" placeholder="number2" id="t2">
+    </div>
+    <div>
+        <input type="text" placeholder="Result" id="t3">
+    </div>
+    <button onclick="t3.value =parseInt(t1.value)+parseInt(t2.value)">+</button>
+<button onclick="t3.value = parseInt(t1.value) - parseInt(t2.value)">-</button>
+<button onclick="t3.value = parseInt(t1.value) * parseInt(t2.value)">*</button>
+<button onclick="t3.value = parseInt(t1.value) / parseInt(t2.value)">/</button>
+<button onclick="t3.value = parseInt(t1.value) % parseInt(t2.value)">%</button>
+
+</body>
+</body>
+</html>

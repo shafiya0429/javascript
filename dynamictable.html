@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: beige;
+            display: flex;
+            justify-content: center;
+            margin: 50px;
+        }
+
+            table{
+                border-collapse: collapse;
+                width: 300px;
+                box-shadow: opx opx 1px gray;
+                border-radius: 5px;
+                background-color: white;
+            }
+
+                th,td{
+                    border: ipx,solid #333;
+                    padding: 20px;
+                    text-align: center;
+                }
+                th{
+                    background-color: steelblue;
+                    color: white;
+
+                }
+                tr:nth-child(even){
+                    background-color: azure;
+                }
+
+                tr:hover{
+                    background-color: cadetblue;
+                }
+                caption{
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        let students=[
+            {sid:101,name:"jaanu",course:"java",fees:5000},
+            {sid:102,name:"shafiya",course:"python",fees:8000},
+            {sid:103,name:"affan",course:"webdev",fees:30000},
+            {sid:104,name:"kouser",course:"oracle",fees:26000},
+            {sid:105,name:"asfiya",course:"cloud",fees:40000}
+        ]
+        let headings=["sid","name","course","fees"];
+        let table=document.createElement("table");
+        let thead=document.createElement("thead");
+        table.appendChild(thead);
+        let theadrow=document.createElement("tr");
+        table.appendChild(theadrow);
+
+        headings.map((h)=>{
+            let th=document.createElement("th");
+            th.innerText=h;
+            theadrow.appendChild(th);
+        }); 
+         let tbody=document.createElement("tbody");
+
+        students.map((s)=>{
+        let tbodyrow=document.createElement("tr");
+        
+         let idcell=document.createElement("td");
+        idcell.innerText=s.sid;
+
+       let namecell=document.createElement("td");
+       namecell.innerText=s.name;
+
+       let coursecell=document.createElement("td");
+       coursecell.innerText=s.course;
+
+       let feescell=document.createElement("td");
+       feescell.innerText=s.fees;
+
+       tbodyrow.append(idcell,namecell,coursecell,feescell);
+       tbody.appendChild(tbodyrow);
+    });
+
+    table.appendChild(tbody);
+
+    document.body.appendChild(table);
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        #parent,#child,#grandchild{
+            border: 1px solidgray;
+            padding: 20px;
+        }
+    </style>
+    
+</head>
+<body>
+    <div id="parent">
+     I am parent
+
+        <div id="child">
+         I am child
+         
+            <div id="grandchild">
+            I am grandchild
+
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        document.getElementById("parent").addEventListener("click",function(e){
+            e.stopPropagation();
+            alert("i am parent!!!");
+        },false);
+
+        document.getElementById("child").addEventListener("click",function(e){
+            e.stopPropagation();
+            alert("i am child!!!");
+        },true);
+
+        document.getElementById("grandchild").addEventListener("click",function(e){
+            e.stopPropagation();
+            alert("i am grandchild!!!");
+        },true);
+    </script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        main{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+        body{
+            padding: 40px;
+        }
+    </style>
+   
+</head>
+<body>
+    <h1>Emp Portal</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, maxime perspiciatis nesciunt quia eum saepe natus fugit amet, illum quisquam accusantium soluta assumenda libero iste molestiae modi? Molestias, facilis ipsam? </p>
+
+    <main>
+        <div>
+            <h3>Enter Emp Details</h3>
+            <form id="details">
+                <div>
+                    <input type="text" placeholder="Empno" name="empno" id="empno">
+                </div>
+                
+                <div>
+                    <input type="text" placeholder="Name" name="name" id="name">
+                </div>
+
+                <div>
+                    <input type="text" placeholder="job" name="job" id="job">
+                </div>
+
+                <div>
+                    <input type="text" palceholder="Salary" name="salary" id="salary">
+                </div>
+
+                <div>
+                    <input type="submit" value="Add Employee">
+                </div>
+
+            </form>
+        </div>
+
+        <div>
+            <h2> Show Data In Table</h2>
+            <table border="1" cellspacing="0px" cellpadding="10px">
+               <thead>
+                 <tr>
+                    <th>Empno</th>
+                     <th>Name</th>
+                     <th>Job</th>
+                     <th>Salary</th>
+                </tr>
+               </thead>
+
+               <tbody id="hello">
+
+            </tbody>
+             
+            </table>
+
+            
+        </div>
+
+    
+    </main>
+
+    <script>
+        let employees=JSON.parse(localStorage.getItem("myemployees")) || []
+
+        document.getElementById("details").addEventListener("submit",function(e){
+            e.preventDefault();
+
+            let emp={
+                empno:document.getElementById("empno").value,
+                name:document.getElementById("name").value,
+                job:document.getElementById("job").value,
+                salary:document.getElementById("salary").value
+            }
+
+            employees.push(emp);
+            localStorage.setItem("myemployees",JSON.stringify(employees));
+            document.getElementById("empno").value="",
+            document.getElementById("name").value="",
+            document.getElementById("job").value="",
+            document.getElementById("salary").value="";
+
+            console.log(employees);
+            showData();
+        })
+
+       function showData()
+{
+
+    document.querySelector("#hello").innerText="";
+
+    employees.map((emp)=>{
+
+       document.querySelector("#hello").innerHTML +=`
+        <tr>
+            <td>${emp.empno}</td>
+            <td>${emp.name}</td>
+            <td>${emp.job}</td>
+            <td>${emp.salary}</td>
+        </tr>
+        
+        `
+
+    })
+}
+
+showData();
+    </script>
+</body>
+</html>

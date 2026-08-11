@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+</head>
+<body>
+    <button onclick="message()"></button>
+    <button id="btn1">click me</button>
+
+    <img src="images/food1.jpg" width="200px" height="200px" id="img1">
+
+    <script>
+        function hello(){
+            alert("hello students");
+        }
+
+        document.getElementById("img1").addEventListener("click",function(){
+            alert("yummmy...tasty food")
+        })
+
+        function message()
+        {
+            alert("yummyy...tasty food");
+        }
+
+        let button=document.createElement("button");
+        button.innerText="send";
+        button.addEventListener("click",function(){
+            alert("msg sending")
+        })
+        document.appendChild(button);
+        
+
+
+    </script>
+</body>
+</html>
+
+

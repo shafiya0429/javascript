@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, reprehenderit soluta enim voluptatem inventore possimus molestias necessitatibus, totam omnis velit voluptates, culpa suscipit iusto. Ipsum, quidem. Magni esse incidunt alias.</p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate veritatis quas necessitatibus error minus, eveniet enim nam ut rem qui culpa, architecto dicta, sapiente quidem blanditiis excepturi ea similique adipisci!</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt, placeat. Saepe inventore dolores vel. Iusto omnis consectetur porro molestiae voluptatibus aperiam debitis fugiat, eos, at, numquam sint quia illum commodi.</p>
+    
+    <button id="btn1"> html</button>
+    <button id="btn2">css</button>
+    <button id="btn3">js</button>
+    <p id="p1"></p>
+
+    <img src="images/KFC img.webp" width="200px" height="200px" id="img1">
+
+    <img src="images/net img1.jfif" width="200px" height="200px" is="img2">
+
+<script>
+
+    document.body.addEventListener("contextmenu",function(e){
+        e.preventDefault();
+        alert("right click is not allowed");
+    });
+
+    document.body.addEventListener("selectstart",function(e){
+        e.preventDefault();
+        alert("selection is not aloowed....");
+    });
+
+    document.getElementById("img1").addEventListener("dblclick",function(e){
+    this.setAttribute("src","images/food1.jpg");
+    });
+
+    document.getElementById("img2").addEventListener("dblclick",function(e){
+        this.setAttribute("src","images/net img3.jfif");
+    });
+
+
+    document.getElementById("btn1").addEventListener("click",function(){
+    let p=document.getElementById("p1");
+    p.innerText="HyperText Markup Language";
+    p.style.color="red";
+    p.style.background="lightblue   ";
+    p.style.padding="10px";
+    p.style.boxShadow="5px 5px 4px black"
+    });
+    
+    document.getElementById("btn2").addEventListener("click",function(){
+        let p=document.getElementById("p1");
+        p.innerText="cascading style sheet";
+        p.style.colors="darkpink";
+        p.style.background="purple";    
+        p.style.padding="10px";
+        p.style.boxShadow="5px 5px 5px black";
+        p.style.fontFamily="times new roman"
+    });
+
+    document.getElementById("btn3").addEventListener("click",function(){
+        let p=document.getElementById("p1");
+        p.innerText="JavaScript";
+        p.style.colors="darkpink";
+        p.style.background="lightgreen";    
+        p.style.padding="10px";
+        p.style.boxShadow="5px 5px 5px black";
+        p.style.fontFamily="times new roman"
+    });
+
+    
+    </script>
+</body>
+</html>

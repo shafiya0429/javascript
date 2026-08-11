@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+</head>
+<body>
+    <input type="text" placeholder="username" id="t1">
+    <p id="p1"></p>
+
+
+    <script>
+        let gmails=["shaffu123@gmail.com","jaan143@gmail.com","kouser@gmail.com"];
+        document.getElementById("t1").addEventListener("keyup",function(){
+            let username=this.value;
+
+            let useremail=gmails.find((email)=>email===username);
+            if(useremail)
+            {
+                document.getElementById("p1").innerText="already taken";
+                document.getElementById("p1").style.color="red";
+            }
+            else{
+                document.getElementById("p1").innerText="valid email";
+                document.getElementById("p1").style.color="green";  
+            }
+
+        });
+
+    
+    </script>
+</body>
+</html>

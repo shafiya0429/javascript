@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <script>
+    let emp={
+        id:10,
+        name:"jaanu",
+        job:"manager",
+        salary:200000,
+
+    address:{
+        city:"atp",
+        state:"AP",
+        pincode:515001,
+    }
+    }
+    console.log(emp);
+    console.log(emp.id);
+    console.log(emp.name);
+    console.log(emp.job);
+    console.log(emp.salary);
+
+    let{id,name,job,salary}=emp;
+    console.log(id,name,job,salary);
+
+    
+    delete emp.salary;
+    console.log(emp.salary);
+   </script>
+</head>
+<body>
+    
+</body>
+</html>

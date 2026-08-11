@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+</head>
+<body>
+    <input type="text" placeholder="username" id="t1">
+    <p>Your name is:<span id="msg"></span></p>
+
+    <input type="text" placeholder="password" id="p1">
+    <p>message is:<span id="msg1"></span></p>
+
+
+    <input type="text" placeholder="username" id="t2">
+    <p>username is:<span  id="msg2"></span></p>
+
+    <script>
+        
+        document.getElementById("t2").addEventListener("keypress",function(){
+            let username=this.value;
+            document.getElementById("msg2").innerText=username;
+        });
+
+
+        document.getElementById("p1").addEventListener("keyup",function(){
+            let password=this.value;
+            let msg=document.getElementById("msg1");
+
+            if (password.length===0){
+                msg.innerText="enter password";
+                msg.style.color="red";
+            }
+            else if(password.length<5||password.length>12){
+                msg.innerText="password should be 5 to 12 characters";
+                msg.style.color="darkblue"
+            }
+            else{
+                msg.innerText="valid password";
+                msg.style.color="green"
+            }
+        });
+
+        document.getElementById("t1").addEventListener("keyup",function(){
+            let username=this.value;
+            document.getElementById("msg").innerText=username;
+        })
+    </script>
+
+</body>
+</html>

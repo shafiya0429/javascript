@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    
+</head>
+<body>
+    <h1 id="h1">PYTHON FULL STACK</h1>
+
+    <marquee id="m1"> HELLOO MY DEAR</marquee>
+
+
+    <img src="images/food3.jfif" width="200px" height="200px" id="img1">
+
+    <script>
+        document.getElementById("h1").addEventListener("mouseover",function(){
+            this.style.color="red";
+            this.style.fontFamily="arial";
+            this.style.textShadow="5px 5px 5px black"
+       });
+
+       document.getElementById("h1").addEventListener("mouseout",function(){
+        this.style.color="green";
+        this.style.fontFamily="times new roman";
+        this.style.textShadow="4px 4px 4px pink"
+       });
+
+       document.getElementById("m1").addEventListener("mouseover",function(){
+        this.stop();
+       });
+
+       document.getElementById("m1").addEventListener("mouseout",function(){
+        this.start();
+       })
+
+
+       document.getElementById("img1").addEventListener("mouseover",function(){
+        this.setAttribute("src","images/food1.jpg")
+       });
+
+       document.getElementById("img1").addEventListener("mouseout",function(){
+        this.setAttribute("src","images/KFC img.webp")
+       })
+    </script>
+</body>
+</html>
